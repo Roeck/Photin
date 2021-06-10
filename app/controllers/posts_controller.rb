@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+    before_action :find_post, only: [:show]
+    before_action :authenticate_user!
+
     def index
         @posts = Post.all.limit(10).includes(:photos)
         @post = Post.new
@@ -19,6 +22,22 @@ class PostsController < ApplicationController
         flash[:alert] = "Something went wrong."
         redirect_to posts_path
         end
+    end
+
+    def show
+    end
+
+    private
+
+    def find_post
+        @post = Post.find_by id: params[:id]
+    return if @post
+        flash[:danger] = "Post not found."
+        redirect_to root_path
+    end
+
+    def post_params
+        params.require(:post).permit :content
     end
 
 end

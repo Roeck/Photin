@@ -17,10 +17,9 @@ gem 'devise', '~> 4.8'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 # Picture handling gems:
-gem 'carrierwave-aws', '~> 1.5'
-gem 'fog', '~> 2.2'
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'cloudinary'
 gem 'mini_magick', '~> 4.11'
-
 
 gem 'bootsnap', '>= 1.4.4', require: false
 

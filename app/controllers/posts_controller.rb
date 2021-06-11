@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     before_action :find_post, only: [:show]
-    before_action :authenticate_user!
+    before_action :authenticate_account!
 
     def index
         @posts = Post.all.limit(10).includes(:photos)

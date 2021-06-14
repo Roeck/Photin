@@ -18,6 +18,7 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 # Picture handling gems:
 gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'carrierwave-imageoptimizer'
 gem 'cloudinary'
 gem 'mini_magick', '~> 4.11'
 
